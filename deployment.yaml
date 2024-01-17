@@ -1,0 +1,29 @@
+apiVersion: apps/v1 # API version of the Kubernetes resource.
+kind: Deployment    # kind of Kubernetes resource the file is defining /  Deployment.
+metadata:
+  name: flask-app-deployment
+spec:
+  replicas: 3  # Number of replicas
+  selector:
+    matchLabels:
+      app: flask-app
+  template:
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+      - name: aquarius-bookstore
+        image: mybookstoreimage.azurecr.io/aquarius-bookstore:v2
+        ports:
+        - containerPort: 5000  
+        env:
+          - name: COSMOS_DB_URI
+            value: "mongodb://flaskmongodbapp:7tnU247b5SSCl33HQJPF4WJHtReOTc7BH1jMieDiFJqPMIr2vOLmKsBAWEe44zrT8pvr4mxpicu4ACDbbOzUEQ==@flaskmongodbapp.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@flaskmongodbapp@" 
+        resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m" 

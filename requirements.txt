@@ -1,0 +1,8 @@
+Flask
+pymongo
+flask-pymongo
+python-dotenv
+flask_mongoengine
+azure-core
+azure-cosmos
+

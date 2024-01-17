@@ -1,0 +1,6 @@
+export COSMOSDB_CONNECTION_STRING='mongodb://flaskmongodbapp:7tnU247b5SSCl33HQJPF4WJHtReOTc7BH1jMieDiFJqPMIr2vOLmKsBAWEe44zrT8pvr4mxpicu4ACDbbOzUEQ==@flaskmongodbapp.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@flaskmongodbapp@'
+
+
+    /Library/Frameworks/Python.framework/Versions/3.11/bin
+
+    pip install -r requirements.txt
